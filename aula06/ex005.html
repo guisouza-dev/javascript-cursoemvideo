@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: #333eff;
+            color: white;
+            font: normal 1.2em Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <p>Aqui vai o resultado</p>
+    <div class="msg">Clique em mim</div>
+
+    <script>
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[0]
+
+        //window.document.write(`Está escrito assim: ${p1.innerText}`)
+        
+        /*p1.style.fontStyle = 'italic'
+        corpo.style.backgroundColor = 'darkred'*/
+        
+        //confirm(p1.innerText)
+        
+        /*var ex = document.getElementById("msg")
+        ex.innerText = 'Estou esperando...'*/
+
+        /*var ex = document.getElementsByName("msg")[0]
+        ex.innerText = 'Estou esperando...'*/
+
+        /*var ex = document.getElementsByClassName("msg")[0]
+        ex.innerHTML = 'Estou esperando...'*/
+
+        var ex = document.querySelector('div.msg')
+        ex.style.background = 'white'
+        ex.style.display = 'inline'
+        ex.style.color = '#333eff'
+        ex.style.padding = '10px'
+        ex.style.borderRadius = '10px'
+        ex.style.cursor = 'pointer'
+    </script>
+</body>
+</html>
