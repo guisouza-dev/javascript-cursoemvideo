@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="shortcut icon" href="../javascript.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        div#area {
+            background-color: #90ee90;
+            padding: 10px;
+            border-radius: 15px;
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            line-height: 150px;
+            font-size: 1.2em;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        div#area:hover {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 15px;
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            line-height: 150px;
+            font-size: 1.2em;
+            border: 2px solid #000;
+        }
+
+        p {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet numquam consequuntur nemo quia ipsa voluptas harum, a quam, quibusdam deserunt nostrum architecto earum eveniet minima? Repellendus similique harum maxime possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur atque illo, veritatis minus non voluptate beatae repellendus tempora aliquam aliquid ea eius, repudiandae fugit odit rem corrupti itaque libero sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis voluptas maxime assumenda praesentium repellendus ratione, obcaecati enim impedit sit rerum eius odit culpa? Minus voluptatibus neque quas quasi soluta.</p>
+
+    <script>
+        var esconder = document.getElementsByTagName("p")[0]
+        var botão = document.getElementById("area")
+        botão.addEventListener('click', clicar)
+        botão.addEventListener('mouseenter', entrar)
+        botão.addEventListener('mouseout', sair)
+
+        function clicar() {
+            if (esconder.style.display == "block"){
+                esconder.style.display = "none"
+            } else {
+                esconder.style.display = "block"
+            }
+            botão.innerHTML = 'Clicou!'
+        }
+
+        function entrar() {
+            botão.style.width = "125px"
+            botão.style.height = "125px"
+            botão.style.lineHeight = "125px"
+            botão.style.transition ="width 0.5s, height 0.5s"
+        }
+
+        function sair() {
+            botão.style.width = "150px"
+            botão.style.height = "150px"
+            botão.style.lineHeight = "150px"
+            botão.style.transition = "all 0.5s"
+        }
+    </script>
+</body>
+</html>

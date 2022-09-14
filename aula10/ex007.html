@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <link rel="shortcut icon" href="../javascript.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.2em;
+        }
+
+        input {
+            padding: 5px;
+            margin: 0px;
+            font-size: 1.2em;
+        }
+
+        div {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        p {
+            font-size: 2em;
+            text-align: center;
+            margin: 0;
+        }
+
+        input.soma {
+            margin: 15px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <form method="get">
+        <label for="numero1">1º número </label><input type="number" name="elemento1" id="elemento1">
+        <p>+</p>
+        <label for="numero2">2º número </label><input type="number" name="elemento2" id="elemento2"><br>
+        <input type="button" value="Somar" onclick="plus()" class="soma"><br>
+        <div id="result">
+            Resultado: 
+        </div>
+    </form>
+
+    <script>
+        function plus() {
+            var elemento1 = document.getElementById("elemento1")
+
+            var elemento2 = document.getElementById("elemento2")
+
+            var number1 = Number(elemento1.value)
+
+            var number2 = Number(elemento2.value)
+
+            var soma = number1 + number2
+
+            var resultado = window.document.getElementById("result")
+
+            resultado.innerHTML = `Resultado: ${soma}`
+        }
+    </script>
+</body>
+</html>
