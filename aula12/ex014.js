@@ -1,5 +1,5 @@
-var agora = new Date()
-var Weekday = agora.getDay()
+let agora = new Date()
+let Weekday = agora.getDay()
 /*
     0 = Domingo
     1 = Segunda

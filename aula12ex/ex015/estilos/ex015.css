@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body {
+    background-color: #363535;
+    font-family: system-ui;
+    padding: 10px;
+}
+
+header, footer {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+section {
+    padding: 15px;
+    max-width: 500px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.267);
+}
+
+section > div {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
