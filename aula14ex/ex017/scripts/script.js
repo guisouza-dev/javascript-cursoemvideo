@@ -1,25 +1,29 @@
-function contar(){
-    let ini = String(document.getElementById('inicio'))
-    let fim = String(document.getElementById('fim'))
-    let passo = String(document.getElementById('passo'))
-    let res =  document.getElementById("res")
+function count(){
+    let start = document.querySelector("input#inicio").value
+    let end = document.querySelector("input#fim").value
+    const step= document.querySelector("input#passo").value
+    let res = document.querySelector("div#res")
 
-    if (ini === "" || fim === "" || passo === ""){
-        alert('Error! dados faltando!')
+    if(start.length === 0 || end.length === 0 || step.length === 0){
+        alert("Reveja os dados e corrija-os")
     } else {
         res.innerHTML = 'Contando...'
-        let i = +ini
-        let p = +passo
-        let f = +fim
-        if(i > f) {
-            for(let c = i; c <= f; c += p){
-                res.innerHTML += `👉${c} `
+        let startNumber = parseInt(start)
+        let endNumber = parseInt(end)
+        let stepNumber = parseInt(step)
+        if (stepNumber === 0){
+            alert("Não consigo identificar o passo, portanto, vou considerá-lo como 1")
+            stepNumber = 1
+        }
+        if (startNumber < endNumber){
+            for(let count = startNumber; count <= endNumber; count += stepNumber){
+                res.innerHTML += `  👉${count}`
             }
-        } else {
-            for(let c = i; c >= f; c -= p){
-                res.innerHTML += `👉${c} `
+            } else if (startNumber > endNumber){
+            for(let count = startNumber; count >= endNumber; count -= stepNumber){
+                res.innerHTML += ` 👉${count}`
             }
         }
+        res.innerHTML += ` 🏁`
     }
-        res.innerHTML += `${ini}`
 }
