@@ -1,7 +1,7 @@
 function count(){
     let start = document.querySelector("input#inicio").value
     let end = document.querySelector("input#fim").value
-    const step= document.querySelector("input#passo").value
+    let step= document.querySelector("input#passo").value
     let res = document.querySelector("div#res")
 
     if(start.length === 0 || end.length === 0 || step.length === 0){
